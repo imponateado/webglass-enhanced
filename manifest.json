@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "WebGlass Enhanced",
+    "description": "An extension that aims to fix some issues of WebGlass, an ERP for glass factories.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+        "js": [
+            "scripts/content.js"
+        ],
+        "matches": [
+            "http://*/*"
+        ],
+        "all_frames": true
+        }
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
+}
