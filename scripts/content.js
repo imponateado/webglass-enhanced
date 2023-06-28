@@ -56,7 +56,6 @@ function replaceTdContent() {
 const tables = document.querySelectorAll('table[data-v-220acddb]');
     tds = [null, null, null];
     if (tds[0] == null || tds[2] == null){
-        const url = `${window.location.hostname}:${window.location.port}/backend/api/v1/clientes/`;
         tables.forEach(table => {
             const rows = table.querySelectorAll('tr');
                 rows.forEach(row => {
